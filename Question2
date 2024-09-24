@@ -39,6 +39,7 @@ def is_accepted(input_str):
 
 return current == 4
 
+
 test = ["abbbcaaa$", "ccccbbb$", "aabbaac$"]
 for test_case in test:
   if is_accepted(test):

@@ -1,10 +1,11 @@
-//-------------------------------------------------------------------------------------------------------------
-// Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
-// Assignment : No. 3
-// Due date : 9/11/24
-// Purpose: this program reads an expression in postfix form, evaluates the
-// expression and displays its value
-//-----------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------
+# Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
+# Assignment : No. 3
+# Due date : 9/11/24
+# Purpose: Reads one token at a time from the given text file and determines whether the token is
+#           a number, an identifier, or a reserved word
+# Programming Language: Python
+#-----------------------------------------------------------------------------------------------------------------
 
 
 reserved = {"while", "for", "switch", "do", "return"}
