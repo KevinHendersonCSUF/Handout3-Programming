@@ -1,10 +1,11 @@
-//-------------------------------------------------
-// Group names: Carlos Hernandez, Mason
-// Assignment: CPSC 323, No.3
-// Due Date: 2/22/2024
-// Purpose: This program reads a given file and reads each token one at a time
-// it identifies which token has a number, an identifier, and a reserved word
-//-------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+// Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
+// Assignment : No. 3
+// Due date : 9/11/24
+// Purpose: this program reads an expression in postfix form, evaluates the
+// expression and displays its value
+//-----------------------------------------------------------------------------------------------------------------
+
 
 reserved = {"while", "for", "switch", "do", "return"}
 
