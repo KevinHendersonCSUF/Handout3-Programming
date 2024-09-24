@@ -1,10 +1,10 @@
-//-------------------------------------------------------------------------------------------------------------
-// Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
-// Assignment : No.3
-// Due date : 9/24/24
-//Purpose: This program reads the user's input and determines if it is accepted or rejected
-//-------------------------------------------------------------------------------------------------------------
-//This Function determines if the given input are accepted, else rejected
+#-------------------------------------------------------------------------------------------------------------
+# Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
+# Assignment : No.3
+# Due date : 9/24/24
+#Purpose: This program reads the user's input and determines if it is accepted or rejected
+#-------------------------------------------------------------------------------------------------------------
+#This Function determines if the given input are accepted, else rejected
 
 def is_accepted(input_str):
   current = 1
