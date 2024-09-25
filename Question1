@@ -7,7 +7,7 @@
 #-----------------------------------------------------------------------------------------------------------------
 
 
-reserved = {"while", "for", "switch", "do", "return"}
+reserved = {"While", "for", "switch", "do", "return"}
 
 # Function to check if a string is a number
 def is_number(token):
