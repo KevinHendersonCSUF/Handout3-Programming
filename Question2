@@ -2,48 +2,59 @@
 # Group names: Gonong, Theo and Henderson, Kevin and Le, Anthony
 # Assignment : No.3
 # Due date : 9/24/24
-#Purpose: This program reads the user's input and determines if it is accepted or rejected
+#Purpose: This program reads the user's input and determines if it is accepted or rejected according to CFG
 #-------------------------------------------------------------------------------------------------------------
-#This Function determines if the given input are accepted, else rejected
 
-def is_accepted(input_str):
-  current = 1
-  for sym in input_str:
-    if current == 1:
-      if sym == 'a' or sym == 'b' or sym == 'c':
-        current= 1
-      elif sym == 'b':
-        current = 2
-      elif sym == 'c':
-        current = 3
-    else:
-      return False
-
-  elif current == 2:
-    if sym == 'b':
-      current = 2
-    elif sym == 'a':
-      current = 3
-    elif sym == '$':
-      current = 4
-    else:
-      return False
-
-  elif current == 3:
-    if sym == 'a':
-      current = 1
-    elif sym == '$':
-      current = 4
-    else:
-      return False
-
-return current == 4
-
-
-test = ["abbbcaaa$", "ccccbbb$", "aabbaac$"]
-for test_case in test:
-  if is_accepted(test):
-    print(f"String '{test_case}' is accepted")
-  else:
-    print(f"String '{test_case}' is rejected")
-
+while True:
+	w = input("Please provide string: ")
+	current = "S"
+	for sym in w:
+		if sym != 'a' and sym != 'b' and sym != 'c' and sym != '$':
+			print("String contains character not in alphabet!, Alphabet is {a, b, c}")
+			break
+		match current:
+			case "S":
+				if sym == 'b' or sym == 'c' or sym == '$':
+					if sym == 'b':
+						current = "B"
+					if sym == 'c':
+						current = "C"
+					if sym == '$':
+						print("String is rejected!")
+						break
+			case "B":
+				if sym == 'a' or sym == 'b' or sym == 'c' or sym == '$':
+					if sym == 'b':
+						current = "B"
+					if sym == 'a':
+						current = "C"
+					if sym == 'c':
+						print("String is rejected!")
+						break
+					if sym == '$':
+						current = '$'
+						print("String is accepted!")
+						break
+			case "C":
+				if sym == 'a' or sym == 'b' or sym == 'c' or sym == '$':
+					if sym == 'b':
+						print("String is rejected!")
+						break
+					if sym == 'a':
+						current = "S"
+					if sym == 'c':
+						print("String is rejected!")
+						break
+					if sym == '$':
+						current = '$'
+						print("String is accepted!")
+						break
+			case _:
+				print("String is accepted!")
+				break
+	choice = input("Input another string?")
+	if choice == 'n':
+		break
+	if choice != 'y' and choice != 'n':
+		print("Invalid option, terminating program")
+		break
