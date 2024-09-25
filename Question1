@@ -4,7 +4,6 @@
 # Due date : 9/11/24
 # Purpose: Reads one token at a time from the given text file and determines whether the token is
 #           a number, an identifier, or a reserved word
-# Programming Language: Python
 #-----------------------------------------------------------------------------------------------------------------
 
 
